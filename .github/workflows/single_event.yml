@@ -1,0 +1,20 @@
+name: single Event
+on: 
+  push:
+   branches:
+     - main
+  pull_request:
+    branches:
+      - main
+jobs:
+  hello:
+    runs-on: ubuntu-latest
+    steps:
+      - name: printing github variables
+        run: |
+          echo "REF: $GITHUB_JOB"
+          echo "Job ID: $GITHUB_JOB"
+          echo "Action: $GITHUB_ACTOR"
+          
+      
+        
